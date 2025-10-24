@@ -1241,6 +1241,10 @@ html {
 .border-transparent{
   border-color: transparent;
 }
+.border-\[\#444444\]{
+  --tw-border-opacity: 1;
+  border-color: rgb(68 68 68 / var(--tw-border-opacity));
+}
 .border-l-transparent{
   border-left-color: transparent;
 }
@@ -1332,6 +1336,10 @@ html {
 }
 .fill-current{
   fill: currentColor;
+}
+.object-cover{
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .p-0{
   padding: 0px;
@@ -1862,6 +1870,11 @@ html {
 
 .hover\:border-\[\#ff0000\]\/50:hover{
   border-color: rgb(255 0 0 / 0.5);
+}
+
+.hover\:border-\[\#ff0000\]:hover{
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
 }
 
 .hover\:bg-\[\#333333\]:hover{

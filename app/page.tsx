@@ -1,15 +1,35 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code2 } from 'lucide-react';
+import { useState, useEffect, useRef } from 'react';
+import { Github, Linkedin, Mail, ExternalLink, Code2, Upload, X } from 'lucide-react';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero');
   const [mounted, setMounted] = useState(false);
+  const [profileImage, setProfileImage] = useState<string | null>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     setMounted(true);
   }, []);
+
+  const handleImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setProfileImage(reader.result as string);
+      };
+      reader.readAsDataURL(file);
+    }
+  };
+
+  const removeImage = () => {
+    setProfileImage(null);
+    if (fileInputRef.current) {
+      fileInputRef.current.value = '';
+    }
+  };
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -141,10 +161,38 @@ export default function Portfolio() {
 
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#2a2a2a] hover:border-[#ff0000]/30 transition-all duration-300">
-              <div className="aspect-square bg-gradient-to-br from-[#ff0000]/20 to-transparent rounded-xl flex items-center justify-center">
-                <div className="w-48 h-48 bg-[#2a2a2a] rounded-full flex items-center justify-center text-6xl">
-                  👤
-                </div>
+              <div className="aspect-square bg-gradient-to-br from-[#ff0000]/20 to-transparent rounded-xl flex items-center justify-center relative group">
+                {profileImage ? (
+                  <>
+                    <img
+                      src={profileImage}
+                      alt="Profile"
+                      className="w-full h-full object-cover rounded-xl"
+                    />
+                    <button
+                      onClick={removeImage}
+                      className="absolute top-4 right-4 w-10 h-10 bg-[#ff0000] hover:bg-[#cc0000] rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                      aria-label="Remove image"
+                    >
+                      <X size={20} />
+                    </button>
+                  </>
+                ) : (
+                  <button
+                    onClick={() => fileInputRef.current?.click()}
+                    className="w-48 h-48 bg-[#2a2a2a] hover:bg-[#333333] rounded-full flex flex-col items-center justify-center gap-3 transition-all duration-300 cursor-pointer border-2 border-dashed border-[#444444] hover:border-[#ff0000]"
+                  >
+                    <Upload size={40} className="text-[#666666]" />
+                    <span className="text-sm text-[#666666]">Upload Image</span>
+                  </button>
+                )}
+                <input
+                  ref={fileInputRef}
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="hidden"
+                />
               </div>
             </div>
 
