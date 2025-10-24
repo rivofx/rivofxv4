@@ -337,7 +337,7 @@ export default function Portfolio() {
       </section>
 
       <footer className="border-t border-[#1a1a1a] py-8 text-center text-[#666666] text-sm">
-        <p>&copy; {new Date().getFullYear()} bogdicn.dev. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} bogdicn.com. All rights reserved.</p>
       </footer>
     </div>
   );
