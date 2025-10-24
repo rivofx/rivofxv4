@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Github, Linkedin, Mail, ExternalLink, Code2 } from 'lucide-react';
+import { Github, Instagram, Mail, ExternalLink, Code2 } from 'lucide-react';
 
 export default function Portfolio() {
   const [activeSection, setActiveSection] = useState('hero');
@@ -318,12 +318,12 @@ export default function Portfolio() {
                 <Github size={20} />
               </a>
               <a
-                href="https://linkedin.com/in/yourusername"
+                href="https://instagram.com/yourusername"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center bg-[#2a2a2a] hover:bg-[#ff0000] rounded-lg transition-all duration-300 hover:scale-110"
               >
-                <Linkedin size={20} />
+                <Instagram size={20} />
               </a>
               <a
                 href="mailto:your@email.com"
