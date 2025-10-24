@@ -326,7 +326,7 @@ export default function Portfolio() {
                 <Instagram size={20} />
               </a>
               <a
-                href="mailto:your@email.com"
+                href="mailto:notbogdi20@gmail.com"
                 className="w-12 h-12 flex items-center justify-center bg-[#2a2a2a] hover:bg-[#ff0000] rounded-lg transition-all duration-300 hover:scale-110"
               >
                 <Mail size={20} />
