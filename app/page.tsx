@@ -41,7 +41,7 @@ export default function Portfolio() {
     { name: 'Tailwind CSS', level: 92 },
     { name: 'Node.js', level: 85 },
     { name: 'UI/UX Design', level: 88 },
-    { name: 'Database Design', level: 82 },
+    { name: 'Database Design', level: 6 },
   ];
 
   return (
