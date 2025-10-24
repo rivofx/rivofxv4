@@ -310,7 +310,7 @@ export default function Portfolio() {
 
             <div className="flex justify-center gap-6 mt-8 pt-8 border-t border-[#2a2a2a]">
               <a
-                href="https://github.com/yourusername"
+                href="https://github.com/rivofx"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-12 h-12 flex items-center justify-center bg-[#2a2a2a] hover:bg-[#ff0000] rounded-lg transition-all duration-300 hover:scale-110"
