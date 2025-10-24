@@ -1,0 +1,14 @@
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[form]
+  name = "contact"
+
+[[notifications]]
+  type = "email"
+  event = "submission_created"
+  emails = ["notbogdi20@gmail.com"]
