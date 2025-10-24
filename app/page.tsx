@@ -143,7 +143,7 @@ export default function Portfolio() {
             <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#2a2a2a] hover:border-[#ff0000]/30 transition-all duration-300">
               <div className="aspect-square bg-gradient-to-br from-[#ff0000]/20 to-transparent rounded-xl flex items-center justify-center overflow-hidden">
                 <img
-                  src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600"
+                  src="https://cdn.discordapp.com/attachments/1269986914220511265/1431333206908600391/image.png?ex=68fd086d&is=68fbb6ed&hm=56de4e129b9416d71c3107da0aa43af09af4cba7db75ff8a6d294b9877e8f18e&"
                   alt="Profile Picture"
                   className="w-full h-full object-cover rounded-xl"
                 />
