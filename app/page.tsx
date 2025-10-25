@@ -49,8 +49,8 @@ export default function Portfolio() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0f0f0f]/80 backdrop-blur-md border-b border-[#1a1a1a]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="text-xl font-semibold">
-            <span className="text-white">bogdicn</span>
-            <span className="text-[#ff0000]">.com</span>
+            <span className="text-white">bogdi</span>
+            <span className="text-[#ff0000]">cn</span>
           </div>
           <div className="flex gap-8">
             {['About', 'Projects', 'Contact'].map((item) => (
@@ -143,7 +143,7 @@ export default function Portfolio() {
             <div className="bg-[#1a1a1a] rounded-2xl p-8 border border-[#2a2a2a] hover:border-[#ff0000]/30 transition-all duration-300">
               <div className="aspect-square bg-gradient-to-br from-[#ff0000]/20 to-transparent rounded-xl flex items-center justify-center overflow-hidden">
                 <img
-                  src="https://cdn.discordapp.com/attachments/1269986914220511265/1431333206908600391/image.png?ex=68fd086d&is=68fbb6ed&hm=56de4e129b9416d71c3107da0aa43af09af4cba7db75ff8a6d294b9877e8f18e&"
+                  src="https://cdn.stoatusercontent.com/attachments/rYalg0nwngvRcVkkcpL-SnoKdr-FkGYnYp_r4htGTK/6958-hacker1812931923123.gif"
                   alt="Profile Picture"
                   className="w-full h-full object-cover rounded-xl"
                 />
